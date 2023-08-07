@@ -30,6 +30,7 @@ services:
 
   celery_beat:
     build: .
+    restart: on-failure
     command: celery -A core beat -l info
     environment:
       - CELERY_BROKER_URL=redis://redis:6379
