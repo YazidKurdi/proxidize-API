@@ -1,9 +1,13 @@
 
 # Proxidize Backend Simulation
 
-Proxidize Django backend aims to provide a robust API for managing simulated modems, with endpoints that allows the user to register, login, control IP rotations, toggle critical mode to mask sensitive data and more. Additionally, the project includes the implementation of Celery and Celery Beat to offload background tasks and perform simulated periodic IP rotations. The sqlite database will be pre-populated with dummy Modems and SMS instances.
+
+Proxidize Django backend aims to provide a robust API for managing simulated modems, with endpoints that allows the user to register, login, control IP rotations, toggle critical mode to mask sensitive data and more. Additionally, the project includes the implementation of Celery and Celery Beat to offload background tasks and perform simulated periodic IP rotations. The sqlite database will be pre-populated with dummy Modems and SMS instances. Token Authentication is used and only authenticated users can access the Modem and SMS views. 
+
+To test the endpoints a new user must be created, logging in would grant an access token that should be used in the request headers - Authorization=Token "access token"
 
 Pytest is used for unit testing.
+
 
 ## Installation
 
